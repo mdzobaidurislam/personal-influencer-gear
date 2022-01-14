@@ -1,0 +1,88 @@
+/*
+
+1.#common 
+1.#header 
+2.#mission 
+3.#develop 
+4.#community 
+5.#service 
+6.#footer
+*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Inter', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+h1,
+h2 {
+    font-size: 50px;
+}
+img {
+    width: 100%;
+}
+section {
+    padding: 60px 0px;
+}
+p {
+    color: rgb(124, 121, 118);
+    margin: 14px 0px;
+    line-height: 35px;
+    text-shadow: rgba(247, 103, 1, 0.33) 0px 0px 20px;
+    font-size: 20px;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.col_lg_50 {
+    width: 50%;
+}
+.col_lg_33 {
+    width: 33.33%;
+}
+.col_lg_40 {
+    width: 40%;
+}
+.col_lg_60 {
+    width: 60%;
+}
+.col_lg_100 {
+    width: 100%;
+}
+.text_align_left {
+    text-align: left
+}
+.text_align_right {
+    text-align: right
+}
+.btn {
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #293565, #1e408b);
+    padding: 15px 40px;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border: 2px solid #203f86;
+    transition: all 0.5s;
+}
+.btn:hover  {
+    background: transparent;
+    color: #000;
+}
+.img_85 img {
+    width: 85%;
+}
