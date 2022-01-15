@@ -270,6 +270,7 @@ ul li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .copy_right h3 a {
@@ -316,8 +317,6 @@ ul li {
         max-width: 1140px
     }
 }
-
-
 @media (max-width: 992px) {
     .container {
         max-width: 960px;
@@ -373,7 +372,7 @@ ul li {
         margin-top: 33px;
         margin-bottom: 70px;
         text-align: center;
-        /* padding: 0 50px; */
+        padding: 0 50px;
     }
     .collection_info h3 {
         font-size: 35px;
@@ -384,10 +383,9 @@ ul li {
     .banner_thumbnail img {
         width: 100%;
     }
-
     /* company   */
     .company_brand_area {
-        /* padding: 0 60px; */
+        padding: 0 60px;
     }
     /* collection */
     .collection_area {
@@ -431,5 +429,18 @@ ul li {
     }
     .collection_area {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media (max-width: 280px) {
+
+    /* banner  */
+    .banner_content h1 {
+        font-size: 27px;
+    }
+    /* collection */
+    .header_title {
+        font-size: 27px;
     }
 }
