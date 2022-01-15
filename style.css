@@ -131,6 +131,7 @@ ul li {
     transform: translateX(0%);
     visibility: visible;
     opacity: 1;
+    z-index: 1;
 }
 
 .mobile_menu ul {
