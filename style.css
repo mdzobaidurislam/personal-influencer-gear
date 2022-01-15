@@ -158,7 +158,7 @@ ul li {
 	margin-top: 70px;
 }
 .mobail_menu ul li a {
-    color: #3a3a3a;
+    color: #bbbbbb;
     display: block;
     padding: 15px;
     font-size: 20px;
@@ -197,7 +197,7 @@ ul li {
 * Company brand styles
 */
 #company {
-    padding: 80px 0;
+    padding-top: 40px;
 }
 
 .company_brand_area {
@@ -256,7 +256,19 @@ ul li {
     font-size: 18px;
     color: #787885;
 }
+.see_more {
+    text-align: right;
+    margin-top: 40px;
+}
 
+.see_more a {
+    font-size: 20px;
+    color: #e02c6d;
+    font-weight: 600;
+}
+.see_more a i {
+    padding-left: 10px;
+}
 /*
 * Footer styles start
 */
@@ -393,7 +405,21 @@ ul li {
     }
 }
 
-
+@media (max-width: 570px) {
+    .banner_content {
+        padding: 0;
+    }
+    .banner_content h1 {
+        font-size: 30px;
+    }
+    .company_brand_area {
+        padding: 0 10px;
+    }
+    /* collection */
+    .header_title {
+        font-size: 30px;
+    }
+}
 
 @media (max-width: 320px) {
     
