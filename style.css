@@ -12,37 +12,49 @@
     margin: 0px;
     padding: 0px;
 }
+
 body {
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    
 }
+
 a {
     text-decoration: none;
 }
+
 h1,
 h2 {
     font-size: 50px;
     color: #3A3A3A;
 }
+
 img {
     width: 100%;
 }
+
 p {
     color: rgb(124, 121, 118);
     margin: 5px 0px;
     line-height: 35px;
     font-size: 18px;
 }
-ul li{
+
+ul li {
     list-style: none;
 }
+
 .container {
-    width: 1140px;
+    max-width:1170px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .text_align_right {
     text-align: right
 }
+
 .btn {
     text-transform: uppercase;
     background: linear-gradient(45deg, rgb(224, 44, 109), rgb(224, 44, 109));
@@ -56,6 +68,7 @@ ul li{
     border: 2px solid rgb(224, 44, 109);
     transition: all 0.5s ease 0s;
 }
+
 /* .btn:hover  {
     background: transparent;
     color: #000;
@@ -73,6 +86,11 @@ ul li{
     justify-content: space-between;
     flex-direction: row;
     padding: 50px 0;
+}
+.toggle, .shop_cart {
+    position: relative;
+    display:none;
+    font-size: 25px;
 }
 .logo a {
     font-size: 24px;
@@ -93,24 +111,84 @@ ul li{
     color: #3A3A3A;
     font-weight: 500;
 }
+/* Mobaile menu  */
+.toggle span {
+    color: #3a3a3a;
+    font-size: 30px;
+    padding: 20px;
+    display: inline-block;
+    position: absolute;
+    z-index: 11;
+    top: -47px;
+    left: 0;
+}
+
+.toggle span:hover .mobail_menu {
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.mobail_menu {
+    background: #060709;
+    position: fixed;
+    width: 250px;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: all .5s;
+    visibility: hidden;
+    opacity: 0;
+}
+.mobail_menu ul li {
+    text-align: center;
+    width: 100%;
+}
+
+#nav .toggle:hover .mobail_menu {
+    transform: translateX(0%);
+    visibility:visible;
+    opacity: 1;
+}
+.mobail_menu ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	margin-top: 70px;
+}
+.mobail_menu ul li a {
+    color: #3a3a3a;
+    display: block;
+    padding: 15px;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+.mobail_menu ul li:hover a {
+    color: #ff8fb7;
+    background-color: #3a3a3a;
+}
 
 /*
 * Banner style start
 */
 .banner_area {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     align-items: center;
 }
+
 .banner_content {
     margin-top: 89px;
     margin-bottom: 80px;
 }
-.banner_btn .btn:hover{
+
+.banner_btn .btn:hover {
     background: transparent;
     color: #000;
 }
+
 .banner_thumbnail img {
     width: 80%;
 }
@@ -121,9 +199,10 @@ ul li{
 #company {
     padding: 80px 0;
 }
+
 .company_brand_area {
     display: grid;
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(7, 1fr);
     align-items: center;
     grid-column-gap: 30px;
 }
@@ -137,7 +216,7 @@ ul li{
 
 .collection_area {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px 30px;
 }
 
@@ -164,12 +243,15 @@ ul li{
     margin: 10px 0;
     font-size: 24px;
 }
+
 .reating i {
     color: orange;
 }
+
 .reating span {
     padding-left: 15px;
 }
+
 .collection_des p {
     font-size: 18px;
     color: #787885;
@@ -195,6 +277,7 @@ ul li{
     font-weight: bold;
     color: #fff;
 }
+
 .copy_right p {
     font-size: 15px;
     margin-top: 8px;
@@ -206,6 +289,7 @@ ul li{
     align-items: center;
     margin-bottom: 20px;
 }
+
 .footer_social ul {
     display: flex;
     flex-direction: row;
@@ -221,4 +305,134 @@ ul li{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*
+* Responsive styles start
+*/
+
+@media (max-width:1200px) {
+    .container {
+        max-width: 1140px
+    }
+}
+
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    .toggle, .shop_cart {
+        display:block;
+    }
+    .menu {
+        display: none;
+    }
+    .banner_content h1 {
+        font-size: 38px;
+    }
+    .banner_content p {
+        font-size: 16px;
+    }
+    .btn {
+        padding: 12px 30px;
+    }
+    /* // company */
+    #company {
+        padding: 10px 0;
+    }
+    .company_brand_area {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+    }
+    /* collection  */
+    .collection_area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+    /* banner  */
+    .banner_area {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-content: center;
+    }
+    .banner_content {
+        margin-top: 33px;
+        margin-bottom: 70px;
+        text-align: center;
+        padding: 0 50px;
+    }
+    .collection_info h3 {
+        font-size: 35px;
+    }
+    .banner_thumbnail {
+        text-align: center;
+    }
+    .banner_thumbnail img {
+        width: 100%;
+    }
+
+    /* company   */
+    .company_brand_area {
+        padding: 0 60px;
+    }
+    /* collection */
+    .collection_area {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+@media (max-width: 320px) {
+    
+    
+    .logo a {
+        font-size: 20px;
+        font-weight: 600;
+        color: #3A3A3A;
+    }
+    /* banner  */
+    .banner_area {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-content: center;
+    }
+    .banner_content {
+        padding: 0;
+    }
+    .banner_content h1 {
+        font-size: 30px;
+    }
+    .banner_thumbnail {
+        text-align: center;
+    }
+
+    /* company   */
+    .company_brand_area {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 10px;
+    }
+    /* collection */
+    
+    .header_title {
+        font-size: 30px;
+    }
+    .collection_area {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
