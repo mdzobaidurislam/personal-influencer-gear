@@ -176,7 +176,6 @@ ul li {
     transition: all 1s ease-in-out;
 }
 #banner:hover .banner_content h1 {
-    /* transform: translate(56px, -32px); */
     transition: all 1s ease-in-out;
     animation: banner_content_move 1.5s infinite;
 }
@@ -443,7 +442,7 @@ ul li {
 
     /* banner */
     .banner_content h1 {
-        font-size: 38px;
+        font-size: 32px;
     }
 
     .banner_content p {
@@ -507,11 +506,6 @@ ul li {
         text-align: center;
         padding: 0 50px;
     }
-
-    .collection_info h3 {
-        font-size: 33px;
-    }
-
     .banner_thumbnail {
         text-align: center;
     }
@@ -529,6 +523,10 @@ ul li {
     .collection_area {
         grid-template-columns: repeat(1, 1fr);
     }
+       .collection_info h3 {
+        font-size: 28px;
+    }
+
 
     /* development */
     .development_area {
@@ -615,11 +613,11 @@ ul li {
 
     /* banner  */
     .banner_content h1 {
-        font-size: 27px;
+        font-size: 23px;
     }
 
     /* collection */
     .header_title {
-        font-size: 27px;
+        font-size: 26px;
     }
 }
